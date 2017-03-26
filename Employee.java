@@ -1,35 +1,47 @@
-import java.util.ArrayList;
-import java.util.List;
+package jdbcdemo;
 
-public class Employee {
-	
-	String fname;
-	String lname;
-	
-	Employee(String fname,String lname){
-		this.fname = fname;
-		this.lname = lname;
+public class Employee {// creating employee object
+	private int Employeeno;
+	private String DOB ;
+	private String FirstName;
+	private String LastName;
+	private String gender;
+	private String hire_date;
+	public int getEmployeeno() {
+		return Employeeno;
 	}
-	static List<Employee> emplist = new ArrayList<>();
-	
-	public  List<Employee> getEmpList(){
-		return emplist;
+	public void setEmployeeno(int employeeno) {
+		Employeeno = employeeno;
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Employee e1 = new Employee("sindhu","sura");
-		Employee e2 = new Employee("prasu","Kanathala");
-	
-		emplist.add(e1);
-		emplist.add(e2);
-		
-		List<Employee> list = e1.getEmpList();
-		for(Employee e :list){
-			System.out.println(e.fname+" "+e.lname);
-		}
-		
-        
+	public String getDOB() {
+		return DOB;
 	}
-
+	public void setDOB(String dOB) {
+		DOB = dOB;
+	}
+	public String getFirstName() {
+		return FirstName;
+	}
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getHire_date() {
+		return hire_date;
+	}
+	public void setHire_date(String hire_date) {
+		this.hire_date = hire_date;
+	}
+	
 }
